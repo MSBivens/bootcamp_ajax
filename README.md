@@ -4,3 +4,5 @@ This is a collection of code for the Coding Dojo Bootcamp, AJAX course assignmen
 The previous stack was Flask + MySQL, the repo for those assignments can be found here: https://github.com/MSBivens/bootcamp_flask_mysql 
 
 I am currently working through this course.
+Getting Github:
+    Learn how to makle a simple API call from a JS file
