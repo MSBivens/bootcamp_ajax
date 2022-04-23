@@ -1,13 +1,19 @@
-fetch("https://api.github.com/users/adion81")
-    .then(response => response.json() )
-    .then(coderData => console.log(coderData) )
-    .catch(err => console.log(err) )
+var form = document.getElementById("myform")
 
-
-async function getCoderData() {
-    var response = await fetch("https://api.github.com/users/MSBivens");
-    var coderData = await response.json();
-    return coderData;
-}
-
-console.log(getCoderData())
+form.addEventListener('submit', function(e) {
+    e.preventDefault()
+    var search = document.getElementById("search").value
+    var originalName = search.split(' ').join('')
+    document.getElementById("response").innerHTML = ""
+    fetch("https://api.github.com/users/"+originalName)
+    .then( (response) => response.json() )
+    .then( (data) => { console.log(data)
+        document.getElementById("response").innerHTML = `
+        <a target="_blank" href="$https://www.github.com/${originalName}"> 
+        <div class="id">${data.id}</div>
+        <div class="url">${data.url}</div>
+        <img src=${data.avatar_url}/> 
+        </a>
+        `
+    })
+})
