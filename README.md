@@ -6,3 +6,6 @@ The previous stack was Flask + MySQL, the repo for those assignments can be foun
 I am currently working through this course.
 Getting Github:
     Learn how to makle a simple API call from a JS file
+
+Dojo Weather:
+    Learn how to use an API key to make API calls
